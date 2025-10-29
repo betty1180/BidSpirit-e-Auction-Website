@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BidSpirit>
+    <home>
+        <navbar>
+            <brand>
+                <logo src="src/assets/Images/Logo.png" alt="Logo" />
+            </brand>
+            <navLinks>
+                <link to="/">Home</link>
+                <link to="/auctions">Auctions</link>
+                <link to="/gallery">Gallery</link>
+                <link to="/about">About Us</link>
+                <link to="/contact">Contact Us</link>
+                <link to="/feedback">Feedback</link>
+            </navLinks>
+            <button variant="primary" onClick="handleSignShow()">Sign In</button>
+            <visitorCount>Visitor Count: {visitorCount}</visitorCount>
+        </navbar>
+        
+        <heroSection style="display: 'none'">
+            <userName>{name}</userName>
+            <heroTexts>
+                <h1>Welcome to BidSpirit</h1>
+                <p>Your online marketplace for fine art, antiques, collectibles, and lots more.</p>
+                <form onSubmit="handleWelcome()">
+                    <input type="text" placeholder="Enter your first name" value="{name}" onChange="handleNameChange()" />
+                    <button type="submit" class="cta-button" style="width: '400px'; marginLeft: '35%'">Submit</button>
+                </form>
+                <welcomeText>{showWelcome ? `Hello, ${name}! Welcome to our auction site!` : ''}</welcomeText>
+            </heroTexts>
+        </heroSection>
+
+        <container class="home-container">
+            <auctionSection>
+                <h1>Upcoming Auctions</h1>
+                <row>
+                    <auctionItems>
+                        <!-- {auctionItems.map((item) => (
+                            <auctionCard onClick={() => handleShow(item)}>
+                                <img src="{item.imageUrl}" alt="{item.title}" />
+                                <title>{item.title}</title>
+                                <basePrice>{item.basePrice}</basePrice>
+                            </auctionCard>
+                        ))} -->
+                    </auctionItems>
+                </row>
+            </auctionSection>
+
+            <modal show="{showModal}" onHide="handleClose()">
+                <modalHeader closeButton>
+                    <modalTitle>{selectedItem ? selectedItem.title : ''}</modalTitle>
+                </modalHeader>
+                <modalBody>
+                    <img src="{selectedItem ? selectedItem.imageUrl : ''}" alt="{selectedItem ? selectedItem.title : ''}" class="img-fluid" />
+                    <p>{selectedItem ? selectedItem.description : ''}</p>
+                    <p>Base Price: {selectedItem ? selectedItem.basePrice : ''}</p>
+                </modalBody>
+                <modalFooter>
+                    <button>Bid</button>
+                    <button style="background: 'red'" onClick="handleClose()">Close</button>
+                </modalFooter>
+            </modal>
+
+            <signModal show="{showSignModal}" onHide="handleSignClose()" centered>
+                <modalHeader closeButton>
+                    <modalTitle>{isSignUp ? 'Sign Up' : 'Sign In'}</modalTitle>
+                </modalHeader>
+                <modalBody>
+                    <socialButtons>
+                        <button variant="primary">Continue with Google</button>
+                        <button variant="dark">Continue with Apple</button>
+                    </socialButtons>
+
+                    <orText>OR</orText>
+
+                    <form>
+                        <input type="email" placeholder="Enter email" />
+                        <input type="password" placeholder="Password" />
+                        <button variant="primary" type="submit">{isSignUp ? 'Sign Up' : 'Sign In'}</button>
+                    </form>
+
+                    <toggleLink>
+                        {isSignUp ? (
+                            <p>Already have an account? <span onClick="toggleSignUp()">Sign In</span></p>
+                        ) : (
+                            <p>Don't have an account? <span onClick="toggleSignUp()">Sign Up</span></p>
+                        )}
+                    </toggleLink>
+                </modalBody>
+            </signModal>
+
+        </container>
+        
+        <ticker />
+    </home>
+    </Home>
+    <Auctions>
+        <PopularItems>
+                <category name="Fine Art">
+                <item>
+                    <id>1</id>
+                    <title>Farm Landscape painting</title>
+                    <description>A beautiful farm painting from the 19th century by Thomas Gilbert.</description>
+                    <basePrice>$600</basePrice>
+                    <imageUrl>src/assets/Images/fine art 1.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>2</id>
+                    <title>House in Garden Painting</title>
+                    <description>A painting of a house in a beautiful garden made in the 19th century.</description>
+                    <basePrice>$500</basePrice>
+                    <imageUrl>src/assets/Images/fine art 2.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>3</id>
+                    <title>Painting of a palace maid</title>
+                    <description>This painting was made in the 20th century by Chloe Jones.</description>
+                    <basePrice>$700</basePrice>
+                    <imageUrl>src/assets/Images/fine art 3.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>4</id>
+                    <title>Spring Painting</title>
+                    <description>A beautiful painting made by Beth Anderson from the 18th century in Nigeria.</description>
+                    <basePrice>$800</basePrice>
+                    <imageUrl>src/assets/Images/fine art 4.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>5</id>
+                    <title>A village street painting</title>
+                    <description>This painting was made in the 20th century by Thomas Gilbert in Nigeria.</description>
+                    <basePrice>$700</basePrice>
+                    <imageUrl>src/assets/Images/fine art 5.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>6</id>
+                    <title>Rose painting</title>
+                    <description>This painting was made in the early 1980s.</description>
+                    <basePrice>$1,000</basePrice>
+                    <imageUrl>src/assets/Images/fine art 6.jpg</imageUrl>
+                </item>
+            </category>
+
+            <category name="Antiques">
+                <item>
+                    <id>1</id>
+                    <title>Old Camera</title>
+                    <description>This camera was used in the early 1880s and still works perfectly well.</description>
+                    <basePrice>$1,000</basePrice>
+                    <imageUrl>src/assets/Images/antique 1.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>2</id>
+                    <title>Eagle Head Staff</title>
+                    <description>This staff was used by a king in 1988 in Nigeria.</description>
+                    <basePrice>$900</basePrice>
+                    <imageUrl>src/assets/Images/antique 2.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>3</id>
+                    <title>Compass</title>
+                    <description>This compass was used by a lost man in 1988 to find his destination.</description>
+                    <basePrice>$500</basePrice>
+                    <imageUrl>src/assets/Images/antique 3.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>4</id>
+                    <title>Old Clock</title>
+                    <description>This clock was used back in the 1880s but works well now.</description>
+                    <basePrice>$800</basePrice>
+                    <imageUrl>src/assets/Images/antique 4.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>5</id>
+                    <title>Kettle</title>
+                    <description>This kettle was used in a palace and is still in good shape.</description>
+                    <basePrice>$100</basePrice>
+                    <imageUrl>src/assets/Images/antique 5.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>6</id>
+                    <title>Old Radio</title>
+                    <description>This radio was used in the 1990s and still works well.</description>
+                    <basePrice>$200</basePrice>
+                    <imageUrl>src/assets/Images/antique 6.jpg</imageUrl>
+                </item>
+            </category>
+
+            <category name="Furniture">
+                <item>
+                    <id>1</id>
+                    <title>A set of office table with chairs</title>
+                    <description>This set consists of an office table and sixteen chairs.</description>
+                    <basePrice>$2,000</basePrice>
+                    <imageUrl>src/assets/Images/furniture 1.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>2</id>
+                    <title>White and Green Set of Chairs</title>
+                    <description>A set of three white and two green chairs that can be used in the office or at home. Made in USA</description>
+                    <basePrice>$1,000</basePrice>
+                    <imageUrl>src/assets/Images/furniture 2.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>3</id>
+                    <title>Gray Office Table Set with Chairs</title>
+                    <description>A set of office table and six chairs made in Italy.</description>
+                    <basePrice>$1,000</basePrice>
+                    <imageUrl>src/assets/Images/furniture 3.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>4</id>
+                    <title>A set of office table and chairs</title>
+                    <description>This set consists of an office table and eight chairs.</description>
+                    <basePrice>$1,000</basePrice>
+                    <imageUrl>src/assets/Images/furniture 4.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>5</id>
+                    <title>A set of office chairs and table</title>
+                    <description>This set consists of a brown office table and eight chairs.</description>
+                    <basePrice>$1,000</basePrice>
+                    <imageUrl>src/assets/Images/furniture 5.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>6</id>
+                    <title>A single couch</title>
+                    <description>An ash three-seater couch made in Italy.</description>
+                    <basePrice>$500</basePrice>
+                    <imageUrl>src/assets/Images/furniture 6.jpg</imageUrl>
+                </item>
+            </category>
+
+            <category name="Collectibles">
+                <item>
+                    <id>1</id>
+                    <title>An ancient genie lamp</title>
+                    <description>This was owned by a king in the 18th century. It can be used in a museum or for educational purposes.</description>
+                    <basePrice>$5,000</basePrice>
+                    <imageUrl>src/assets/Images/collectible 1.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>2</id>
+                    <title>A set of ancient cups and kettle</title>
+                    <description>This consists of a set of four brown ancient cups and three kettles.</description>
+                    <basePrice>$500</basePrice>
+                    <imageUrl>src/assets/Images/collectible 2.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>3</id>
+                    <title>Old coffee grinder</title>
+                    <description>This is a coffee grinder that was made in the late 80s in the UK.</description>
+                    <basePrice>$700</basePrice>
+                    <imageUrl>src/assets/Images/collectible 3.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>4</id>
+                    <title>Coffee Grinder</title>
+                    <description>This coffee grinder works as a coffee grinder and coffee maker. It was made in USA in 1994.</description>
+                    <basePrice>$500</basePrice>
+                    <imageUrl>src/assets/Images/collectible 4.jpg</imageUrl>
+                </item>
+                <item>
+                    <id>5</id>
+                    <title>Ancient Cups</title>
+                    <description>A set of three cups made in 1883 in Denmark.</description>
+                    <basePrice>$300</basePrice>
+                    <imageUrl>src/assets/Images/collectible 5.jpg</imageUrl>
+                </item>
+            </category>
+        </PopularItems>
+
+        <category name="Sponsored Auctions">
+            <item>
+                <id>1</id>
+                <title>White and Green Set of Chairs</title>
+                <description>A set of three white and two green chairs that can be used in the office or at home. Made in USA</description>
+                <basePrice>$1,000</basePrice>
+                <imageUrl>src/assets/Images/furniture 2.jpg</imageUrl>
+            </item>
+            <item>
+                <id>2</id>
+                <title>Gray Office Table Set with Chairs</title>
+                <description>A set of office table and six chairs made in Italy.</description>
+                <basePrice>$1,000</basePrice>
+                <imageUrl>src/assets/Images/furniture 3.jpg</imageUrl>
+            </item>
+            <item>
+                <id>3</id>
+                <title>An ancient genie lamp</title>
+                <description>This was owned by a king in the 18th century. It can be used in a museum or for educational purposes.</description>
+                <basePrice>$5,000</basePrice>
+                <imageUrl>src/assets/Images/collectible 1.jpg</imageUrl>
+            </item>
+            <item>
+                <id>4</id>
+                <title>Old coffee grinder</title>
+                <description>This is a coffee grinder that was made in the late 80s in the UK.</description>
+                <basePrice>$700</basePrice>
+                <imageUrl>src/assets/Images/collectible 3.jpg</imageUrl>
+            </item>
+            <item>
+                <id>5</id>
+                <title>Painting of a palace maid</title>
+                <description>This painting was made in the 20th century by Chloe Jones.</description>
+                <basePrice>$700</basePrice>
+                <imageUrl>src/assets/Images/fine art 3.jpg</imageUrl>
+            </item>
+    </category>
+
+
+    <category name="Completed Auctions">
+        <item>
+            <id>1</id>
+            <title>A set of office table with chairs</title>
+            <description>This set consists of an office table and sixteen chairs.</description>
+            <basePrice>$2,000</basePrice>
+            <imageUrl>src/assets/Images/furniture 1.jpg</imageUrl>
+        </item>
+        <item>
+            <id>2</id>
+            <title>A set of office chairs and table</title>
+            <description>This set consists of a brown office table and eight chairs.</description>
+            <basePrice>$1,000</basePrice>
+            <imageUrl>src/assets/Images/furniture 5.jpg</imageUrl>
+        </item>
+        <item>
+            <id>3</id>
+            <title>A village street painting</title>
+            <description>This painting was made in the 20th century by Thomas Gilbert in Nigeria.</description>
+            <basePrice>$700</basePrice>
+            <imageUrl>src/assets/Images/fine art 5.jpg</imageUrl>
+        </item>
+        <item>
+            <id>4</id>
+            <title>Coffee Grinder</title>
+            <description>This coffee grinder works as a coffee grinder and coffee maker. It was made in USA in 1994</description>
+            <basePrice>$500</basePrice>
+            <imageUrl>src/assets/Images/collectible 4.jpg</imageUrl>
+        </item>
+        <item>
+            <id>5</id>
+            <title>Ancient Cups</title>
+            <description>A set of three cups made in 1883 in Denmark.</description>
+            <basePrice>$300</basePrice>
+            <imageUrl>src/assets/Images/collectible 5.jpg</imageUrl>
+        </item>
+    </category>
+    </Auctions>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <gallery>
+        <title>Gallery</title>
+        <images>
+            <image>
+                <src>src/assets/Images/antique 1.jpg</src>
+                <alt>Gallery item 1</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/antique 2.jpg</src>
+                <alt>Gallery item 2</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/antique 3.jpg</src>
+                <alt>Gallery item 3</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/antique 4.jpg</src>
+                <alt>Gallery item 4</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/antique 5.jpg</src>
+                <alt>Gallery item 5</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/antique 6.jpg</src>
+                <alt>Gallery item 6</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/collectible 1.jpg</src>
+                <alt>Gallery item 7</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/collectible 2.jpg</src>
+                <alt>Gallery item 8</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/collectible 3.jpg</src>
+                <alt>Gallery item 9</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/collectible 4.jpg</src>
+                <alt>Gallery item 10</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/collectible 5.jpg</src>
+                <alt>Gallery item 11</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/collectible 6.jpg</src>
+                <alt>Gallery item 12</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/fine art 1.jpg</src>
+                <alt>Gallery item 13</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/fine art 2.jpg</src>
+                <alt>Gallery item 14</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/fine art 3.jpg</src>
+                <alt>Gallery item 15</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/fine art 4.jpg</src>
+                <alt>Gallery item 16</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/fine art 5.jpg</src>
+                <alt>Gallery item 17</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/fine art 6.jpg</src>
+                <alt>Gallery item 18</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/furniture 1.jpg</src>
+                <alt>Gallery item 19</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/furniture 2.jpg</src>
+                <alt>Gallery item 20</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/furniture 3.jpg</src>
+                <alt>Gallery item 21</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/furniture 4.jpg</src>
+                <alt>Gallery item 22</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/furniture 5.jpg</src>
+                <alt>Gallery item 23</alt>
+            </image>
+            <image>
+                <src>src/assets/Images/furniture 6.jpg</src>
+                <alt>Gallery item 24</alt>
+            </image>
+        </images>
+        <modal>
+            <header>
+                <title>Image Preview</title>
+                <button>Close</button>
+            </header>
+            <body>
+                <imagePreview>
+                    <src></src> <!-- Dynamic content when an image is clicked -->
+                    <alt>Selected image</alt>
+                </imagePreview>
+            </body>
+            <footer>
+                <button>Close</button>
+            </footer>
+        </modal>
+    </gallery>
+
+    <about>
+        <title>About Us</title>
+        <container class="about-container">
+            <section class="about-description">
+                <row>
+                    <column size="md-6">
+                        <card>
+                            <image>
+                                <src>src/assets/Images/about bg.JPG</src>
+                                <alt>Antique Collection</alt>
+                                <class>about-image</class>
+                            </image>
+                            <content>
+                                <text>
+                                    BidSpirit is the world's leading online marketplace for fine art, antiques, furniture, and collectibles. We make it easy for collectors worldwide to discover and acquire the items they are most passionate about in one place. Our e-auctioning portal is one of the most preferred sites in the industry.
+                                </text>
+                            </content>
+                        </card>
+                    </column>
+                </row>
+            </section>
+
+            <section class="contact-details">
+                <row>
+                    <column size="md-12">
+                        <card class="text-center">
+                            <content>
+                                <text>
+                                    Contact Number: +234 8012 345 6789 <br />
+                                    Email ID: bidspirit@gmail.com <br />
+                                    Address: 3rd Avenue, Gwarimpa, Abuja, Nigeria
+                                </text>
+                            </content>
+                        </card>
+                    </column>
+                </row>
+            </section>
+        </container>
+    </about>
+
+    <contact>
+        <title>Contact Us</title>
+        <container class="container">
+            <form id="contact-form">
+                <formGroup controlId="formBasicEmail">
+                    <label>Email address</label>
+                    <input type="email" placeholder="Enter email" required class="form-email" />
+                </formGroup>
+                
+                <contact-info>
+                    Contact Number: +234 8012 345 6789 <br />
+                    Email ID: bidspirit@gmail.com <br />
+                    Address: 3rd Avenue, Gwarimpa, Abuja, Nigeria
+                </contact-info>
+                
+                <formGroup controlId="formBasicMessage">
+                    <label>Message</label>
+                    <textarea rows="3" placeholder="Your message" required class="form-control"></textarea>
+                </formGroup>
+
+                <button variant="primary" type="submit">Submit</button>
+            </form>
+        </container>
+    </contact>
+
+    <feedback>
+        <container class="feedback-container">
+            <title>Feedback</title>
+            <heading class="text-center">Feedback</heading>
+            
+            <alert>
+                <showAlert variant="info" id="feedbackAlert" />
+                <message>{alertMessage}</message>
+            </alert>
+            
+            <form onSubmit="handleSubmit">
+                <formGroup controlId="formName">
+                    <label>Name</label>
+                    <input
+                        type="text"
+                        placeholder="Enter your name"
+                        name="name"
+                        value="{formData.name}"
+                        onChange="handleChange"
+                        required="true"
+                    />
+                </formGroup>
+                
+                <div class="space-b"></div>
+                
+                <formGroup controlId="formEmail">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        name="email"
+                        value="{formData.email}"
+                        onChange="handleChange"
+                        required="true"
+                    />
+                </formGroup>
+                
+                <div class="space-b"></div>
+                
+                <formGroup controlId="formFeedback">
+                    <label>Feedback</label>
+                    <textarea
+                        rows="3"
+                        placeholder="Enter your feedback"
+                        name="feedback"
+                        value="{formData.feedback}"
+                        onChange="handleChange"
+                        required="true"
+                    ></textarea>
+                </formGroup>
+                
+                <button variant="primary" type="submit">Submit</button>
+            </form>
+        </container>
+    </feedback>
+
+    <sitemap>
+        <container class="sitemap-container" id="sitemap-info" onLoad="handleAnimation">
+            <title>Sitemap</title>
+            <heading class="text-center text-light">Sitemap</heading>
+            
+            <listGroup>
+                <listGroupItem>
+                    <link to="/" class="link">Home</link>
+                </listGroupItem>
+                <listGroupItem>
+                    <link to="/auctions" class="link">Auctions</link>
+                </listGroupItem>
+                <listGroupItem>
+                    <link to="/gallery" class="link">Gallery</link>
+                </listGroupItem>
+                <listGroupItem>
+                    <link to="/about" class="link">About Us</link>
+                </listGroupItem>
+                <listGroupItem>
+                    <link to="/contact" class="link">Contact Us</link>
+                </listGroupItem>
+            </listGroup>
+        </container>
+    </sitemap>
+
+    <footer class="footer">
+        <p>&copy; 2024 BidSpirit. All rights reserved.</p>
+    </footer>
+</BidSpirit>

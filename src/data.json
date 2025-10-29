@@ -1,0 +1,326 @@
+{
+    "home": {
+      "upcomingAuctions": [
+        {
+          "id": 1,
+          "title": "Spring Painting",
+          "description": "A beautiful painting made by Beth Anderson from the 18th century in Nigeria.",
+          "basePrice": "$800",
+          "imageUrl": "/Images/fine art 4.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Gray Office Table Set with Chairs",
+          "description": "A set of office table and six chairs made in Italy.",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/furniture 3.jpg"
+        },
+        {
+          "id": 3,
+          "title": "White and Green Set of Chairs",
+          "description": "A set of three white and two green chairs that can be used in the office or at home. Made in USA",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/furniture 2.jpg"
+        }
+      ]
+    },
+    "auctions": {
+      "fineArt": [
+        {
+          "id": 1, 
+          "title": "Farm Landscape painting",
+          "description": "A beautiful farm painting from the 19th century by Thomas Gilbert.",
+          "basePrice": "$600",
+          "imageUrl": "/Images/fine art 1.jpg"
+        },
+        {
+          "id": 2, 
+          "title": "House in Garden Painting",
+          "description": "A painting of a house in a beautiful garden made in the 19th century.",
+          "basePrice":"$500",
+          "imageUrl": "/Images/fine art 2.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Vintage Clock",
+          "image": "/Images/fine art 4.jpg",
+          "price": "$180",
+          "description": "A vintage clock with intricate designs."
+        },
+        {
+          "id": 4,
+          "title": "Spring Painting",
+          "description": "A beautiful painting made by Beth Anderson from the 18th century in Nigeria.",
+          "basePrice": "$800",
+          "imageUrl": "/Images/fine art 4.jpg"
+        },
+        {
+          "id": 5,
+          "title": "A village street painting",
+          "description": "This painting was made in the 20th century by Thomas Gilbert in Nigeria.",
+          "basePrice": "$700",
+          "imageUrl": "/Images/fine art 5.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Rose painting",
+          "description": "This painting was made in the early 1980s.",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/fine art 6.jpg"
+        }
+      ],
+
+
+      "antiques": [
+        {
+          "id": 1,
+          "title": "Old Camera",
+          "description": "This camera was used in the early 1880s and still works perfectly well.",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/antique 1.jpg"
+        },
+        {
+          "id": 2, 
+          "title": "Eagle Head Staff",
+          "description": "This staff was used by a king in 1988 in Nigeria.",
+          "basePrice": "$900",
+          "imageUrl": "/Images/antique 2.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Compass",
+          "description": "This compass was used by a lost man in 1988 to find his destination.",
+          "basePrice": "$500",
+          "imageUrl": "/Images/antique 3.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Old Clock",
+          "description": "This clock was used back in the 1880s but works well now.",
+          "basePrice": "$800",
+          "imageUrl": "/Images/antique 4.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Kettle",
+          "description": "This kettle was used in a palace and is still in good shape.",
+          "basePrice": "$100",
+          "imageUrl": "/Images/antique 5.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Old Radio",
+          "description": "This radio was used in the 1990s and still works well.",
+          "basePrice": "$200",
+          "imageUrl": "/Images/antique 6.jpg"
+        }
+      ],
+
+
+      "furniture": [
+        {
+          "id": 1,
+          "title": "A set of office table with chairs",
+          "description": "This set consists of an office table and sixteen chairs.",
+          "basePrice": "$2,000",
+          "imageUrl": "/Images/furniture 1.jpg"
+        },
+        {
+          "id": 2, 
+          "title": "White and Green Set of Chairs",
+          "description": "A set of three white and two green chairs that can be used in the office or at home. Made in USA",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/furniture 2.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Gray Office Table Set with Chairs",
+          "description": "A set of office table and six chairs made in Italy.",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/furniture 3.jpg"
+        },
+        {
+          "id": 4,
+          "title": "A set of office table and chairs",
+          "description": "This set consists of an office table and eight chairs.",
+          "basePrice": "$1,000",
+          "imageUrl": "src/assets/Images/furniture 4.jpg"
+        },
+        {
+          "id": 5,
+          "title": "A set of office chairs and table",
+          "description": "This set consists of a brown office table and eight chairs.",
+          "basePrice": "$1000",
+          "imageUrl": "src/assets/Images/furniture 5.jpg"
+        },
+        {
+          "id": 6,
+          "title": "A single couch",
+          "description": "An ash three-seater couch made in Italy.",
+          "basePrice": "$500",
+          "imageUrl": "/Images/furniture 6.jpg"
+        }
+      ],
+
+
+      "collectibles": [
+        {
+          "id": 1,
+          "title": "An ancient genie lamp",
+          "description": "This was owned by a king in the 18th century. It can be used in a museum or for educational purposes.",
+          "basePrice": "$5,000",
+          "imageUrl": "/Images/collectible 1.jpg"
+        },
+        {
+          "id": 2, 
+          "title": "A set of ancient cups and kettle",
+          "description": "This consists of a set of four brown ancient cups and three kettles.",
+          "basePrice": "$500",
+          "imageUrl": "/Images/collectible 2.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Old coffee grinder",
+          "description": "This is a coffee grinder that was made in the late 80s in the UK.",
+          "basePrice": "$700",
+          "imageUrl": "/Images/collectible 3.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Coffee Grinder",
+          "description": "This coffee grinder works as a coffee grinder and coffee maker. It was made in USA in 1994",
+          "basePrice": "$500",
+          "imageUrl": "/Images/collectible 4.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Ancient Cups",
+          "description": "A set of three cups made in 1883 in Denmark.",
+          "basePrice": "$300",
+          "imageUrl": "/Images/collectible 5.jpg"
+        }
+      ],
+
+
+      "sponsoredAuctions": [
+        {
+          "id": 1,
+          "title": "White and Green Set of Chairs",
+          "description": "A set of three white and two green chairs that can be used in the office or at home. Made in USA",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/furniture 2.jpg"
+        },
+        {
+          "id": 2, 
+          "title": "Gray Office Table Set with Chairs",
+          "description": "A set of office table and six chairs made in Italy.",
+          "basePrice": "$1,000",
+          "imageUrl": "/Images/furniture 3.jpg"
+        },
+        {
+          "id": 3,
+          "title": "An ancient genie lamp",
+          "description": "This was owned by a king in the 18th century. It can be used in a museum or for educational purposes.",
+          "basePrice": "$5,000",
+          "imageUrl": "/Images/collectible 1.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Old coffee grinder",
+          "description": "This is a coffee grinder that was made in the late 80s in the UK.",
+          "basePrice": "$700",
+          "imageUrl": "/Images/collectible 3.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Painting of a palace maid",
+          "description": "This painting was made in the 20th century by Chloe Jones.",
+          "basePrice": "$700",
+          "imageUrl": "/Images/fine art 3.jpg"
+        }
+      ],
+
+
+
+      "completedAuctions": [
+        {
+          "id": 1,
+          "title": "A set of office table with chairs",
+          "description": "This set consists of an office table and sixteen chairs.",
+          "basePrice": "$2,000",
+          "imageUrl": "/Images/furniture 1.jpg"
+        },
+        {
+          "id": 2, 
+          "title": "A set of office chairs and table",
+          "description": "This set consists of a brown office table and eight chairs.",
+          "basePrice": "$1000",
+          "imageUrl": "/Images/furniture 5.jpg"
+        },
+        {
+          "id": 3,
+          "title": "A village street painting",
+          "description": "This painting was made in the 20th century by Thomas Gilbert in Nigeria.",
+          "basePrice": "$700",
+          "imageUrl": "/Images/fine art 5.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Coffee Grinder",
+          "description": "This coffee grinder works as a coffee grinder and coffee maker. It was made in USA in 1994",
+          "basePrice": "$500",
+          "imageUrl": "/Images/collectible 4.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Ancient Cups",
+          "description": "A set of three cups made in 1883 in Denmark.",
+          "basePrice": "$300",
+          "imageUrl": "/Images/collectible 5.jpg"
+        }
+      ]
+      },
+
+
+    "gallery": [
+        "/Images/antique 1.jpg",
+        "/Images/antique 2.jpg",
+        "/Images/antique 3.jpg",
+        "/Images/antique 4.jpg",
+        "/Images/antique 5.jpg",
+        "/Images/antique 6.jpg",
+        "/Images/collectible 1.jpg",
+        "/Images/collectible 2.jpg",
+        "/Images/collectible 3.jpg",
+        "/Images/collectible 4.jpg",
+        "/Images/collectible 5.jpg",
+        "/Images/collectible 6.jpg",
+        "/Images/fine art 1.jpg",
+        "/Images/fine art 2.jpg",
+        "/Images/fine art 3.jpg",
+        "/Images/fine art 4.jpg",
+        "/Images/fine art 5.jpg",
+        "/Images/fine art 6.jpg",
+        "/Images/furniture 1.jpg",
+        "/Images/furniture 2.jpg",
+        "/Images/furniture 3.jpg",
+        "/Images/furniture 4.jpg",
+        "/Images/furniture 5.jpg",
+        "/Images/furniture 6.jpg"
+    ],
+
+
+
+    "about": {
+      "companyInfo": "BidSpirit is the world's leading online marketplace for fine art, antiques, furniture, and collectibles. We make it easy for collectors worldwide to discover and acquire the items they are most passionate about in one place. Our e-auctioning portal is one of the most preferred sites in the industry."
+    },
+
+
+
+    "contact": {
+      "email": "bidspirit@gmail.com",
+      "address": "3rd Avenue, Gwarimpa, Abuja, Nigeria",
+      "phone": "+234 8012 345 6789"
+    }
+  }
+  
