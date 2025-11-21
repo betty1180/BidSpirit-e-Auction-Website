@@ -1,0 +1,84 @@
+.about-container {
+  padding: 20px;
+  background-color: #f2f2f2; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 1200px; /* Limit width for better readability */
+  margin: 0 auto; /* Center the container */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-container h1{
+  color: #0056B4;
+  font-weight: bold;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-title {
+  font-size: 2.5rem; /* Large title size */
+  color: #333; /* Dark color for title */
+  font-weight: bold; /* Bold text */
+}
+
+.about-description {
+  font-size: 1.2rem; /* Slightly larger text for readability */
+  color: #666; /* Medium color for description text */
+  line-height: 1.6; /* Spacing between lines */
+  margin-bottom: 20px; /* Space below description */
+}
+
+.about-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+}
+
+
+.about-team {
+  display: flex; /* Use flexbox for team layout */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-around; /* Space out items evenly */
+  margin-top: 20px; /* Space above team section */
+}
+
+.team-member {
+  flex: 1 1 200px; /* Flexible basis with minimum width */
+  margin: 10px; /* Space around team members */
+  padding: 15px; /* Inner padding */
+  background-color: #fff; /* White background for members */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.member-name {
+  font-size: 1.5rem; /* Member name size */
+  color: #333; /* Dark color */
+  font-weight: bold; /* Bold text */
+}
+
+.member-role {
+  font-size: 1.1rem; /* Role size */
+  color: #777; /* Lighter color for role */
+  margin-bottom: 10px; /* Space below role */
+}
+
+.member-image {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 10px; /* Space below image */
+}
+
+@media (max-width: 768px) {
+  .about-title {
+      font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .about-description {
+      font-size: 1rem; /* Smaller description on mobile */
+  }
+}

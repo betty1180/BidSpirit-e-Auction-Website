@@ -1,0 +1,66 @@
+.sitemap-container {
+  padding: 20px;
+  background-color: #549ce9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 800px; /* Limit width for better readability */
+  margin: 0 auto;  /* Centering the container */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.sitemap-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sitemap-title {
+  font-size: 2rem;
+  color: #333; /* Dark color for title */
+  font-weight: bold;
+}
+
+.sitemap-list {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+}
+
+.sitemap-item {
+  padding: 10px; /* Space between items */
+  margin-bottom: 10px; /* Space below each item */
+  background-color: #ffffff; /* White background for items */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+.sitemap-item:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.link {
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Bootstrap primary color */
+  font-size: 1.1rem; /* Slightly larger font for links */
+  display: block; /* Make the whole item clickable */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.link:hover{
+  color: #0056b3;
+}
+
+.sitemap-item a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: #0056b3; /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+  .sitemap-container {
+      padding: 15px; /* Less padding on mobile */
+  }
+
+  .sitemap-title {
+      font-size: 1.5rem; /* Smaller title on mobile */
+  }
+}

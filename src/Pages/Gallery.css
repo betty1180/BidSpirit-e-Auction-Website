@@ -1,0 +1,25 @@
+.gallery-container {
+  padding: 20px;
+}
+
+.gallery-item {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item.hovered {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+.gallery-item:hover {
+  border: 2px solid #007bff;
+}
+
+.modal-dialog {
+  max-width: 80%;
+}
+
+.modal-body {
+  padding: 0;
+}
